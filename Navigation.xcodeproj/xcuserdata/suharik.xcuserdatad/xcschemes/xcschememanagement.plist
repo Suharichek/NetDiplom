@@ -6,8 +6,40 @@
 	<dict>
 		<key>Navigation.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>StorageService.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0F56A847283803AA00A43C39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F56A84F283803AB00A43C39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F619B1727DB804100624BFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F7180092838022700E27253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

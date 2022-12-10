@@ -1,0 +1,100 @@
+/* 
+  Localizable.strings
+  Navigation
+
+  Created by Suharik on 06.10.2022.
+  
+*/
+
+//Общие
+"mainTitle" = "Главная";
+"profileTitle" = "Профиль";
+"locationTitle" = "Локация";
+"favouriteTitle" = "Избранное";
+"authTitle" = "Аутентификация";
+"exitTitle" = "Выйти";
+"alertAcceptTitle" = "Понято";
+
+//LogInViewController
+"loginTitle" = "Войти";
+"registrTitle" = "Еще нет аккаунта? Регистрация";
+"regTitle" = "Регистрация";
+"logTitle" = "Уже зарегистрированы? Войти";
+"emailText" = "Email или номер телефона";
+"passText" = "Пароль";
+"loginAlertTitle" = "Ошибка ⚠️";
+
+//ProfileViewController
+"profileAlertMessage" = "Вы действительно хотите выйти?";
+"profileAcceptTitle" = "Да";
+"profileDeclineTitle" = "Нет";
+"photoTitle" = "Галерея";
+"postsLabel" = "150\nпубликаций";
+"subLabel" = "500\nподписок";
+"followerLabel" = "250 тыс.\nподписчиков";
+"postLabel" = "Запись";
+"historyLabel" = "История";
+"photoLabel" = "Фото";
+
+//ProfileHeadreView
+"fullInfoTitle" = "Подробная информация";
+"editTitle" = "Редактировать";
+"statusTitle" = "Пока пусто";
+"statusText" = "Чего-то ждем...";
+
+//PostTableViewCell
+//"likes" = " лайков";
+"views" = " просмотров";
+
+//PhotosTableViewCell
+"photosTitle" = "Фото";
+
+//FeedViewController
+"postButtonTitle" = "Перейти на пост";
+"newPostTitle" = "Новый пост";
+"notificationButton" = "Уведомления";
+"newsTitle" = "Новости";
+"forUTitle" = "Для вас";
+
+//PostViewController
+"urlTextView" = "Заголовок: ";
+"planetTextView" = "Орбитальный период Татуины ";
+
+//InfoViewController
+"infoTitle" = "Информация";
+"infoAlertTitle" = "Внимание";
+"infoAlertMessage" = "Что-то идет не так...";
+"infoAlertNo" = "Непонято";
+"buttonAlertText" = "Открыть предупреждение";
+
+//LocationViewController
+"routeButtonTitle" = "Проложить";
+"removeButtonTitle" = "Удалить";
+"pinTitle" = "Точка назначения";
+
+//AuthViewController
+"authButton" = "Войти по биометрии";
+"errorAlertTitle" = "Внимание";
+"errorAlertMessage" = "Биометрия не разрешена";
+
+//LocalNotificationsService
+"contentTitle" = "Посмотрите последние обновления";
+"contentBody" = "Может там что-то новенькое?";
+
+//SideMenuViewController
+"menu" = "Меню";
+"settingsTitle" = "Настройки";
+"friendsTitle" = "Друзья";
+
+//SecondProfileHeaderView
+"messageTitle" = "Написать";
+"callTitle" = "Позвонить";
+
+//FullInfoViewController
+"nameLabel" = "Имя";
+"surnameLabel" = "Фамилия";
+"sexLabel" = "Пол";
+"womenLabel" = "Женский";
+"menLabel" = "Мужской";
+"birthLabel" = "Дата рождения";
+"cityLabel" = "Родной город";

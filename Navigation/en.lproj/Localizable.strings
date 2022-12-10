@@ -1,0 +1,103 @@
+/* 
+  Localizable.strings
+  Navigation
+
+  Created by Suharik on 06.10.2022.
+  
+*/
+
+//Общие
+"mainTitle" = "Main";
+"profileTitle" = "Profile";
+"locationTitle" = "Location";
+"favouriteTitle" = "Favourite";
+"authTitle" = "Authentification";
+"exitTitle" = "Exit";
+"alertAcceptTitle" = "OK";
+
+//LogInViewController
+"loginTitle" = "Log in";
+"registrTitle" = "Don't have an account yet? Registration";
+"regTitle" = "Registration";
+"logTitle" = "Already registered? Log in";
+"emailText" = "Email or phone number";
+"passText" = "Password";
+"loginAlertTitle" = "Error ⚠️";
+
+//ProfileViewController
+"profileAlertMessage" = "Do you really want to exit?";
+"profileAcceptTitle" = "Yes";
+"profileDeclineTitle" = "No";
+"photoTitle" = "Gallery";
+"postsLabel" = "150\nposts";
+"subLabel" = "500\nsubscribes";
+"followerLabel" = "250 тыс.\nfollowers";
+"postLabel" = "Post";
+"historyLabel" = "History";
+"photoLabel" = "Photo";
+
+//ProfileHeadreView
+"fullInfoTitle" = "Full info";
+"editTitle" = "Edit";
+"statusTitle" = "Empty yet";
+"statusText" = "Waiting for smth...";
+
+//PostTableViewCell
+//"likes" = " likes";
+"views" = " views";
+
+//PhotosTableViewCell
+"photosTitle" = "Photos";
+
+//FeedViewController
+"postButtonTitle" = "Go to the post";
+"newPostTitle" = "New post";
+"notificationButton" = "Notifications";
+"newsTitle" = "News";
+"forUTitle" = "For you";
+
+//PostViewController
+"urlTextView" = "Title: ";
+"planetTextView" = "Orbital period of Tatooine is ";
+
+//InfoViewController
+"infoTitle" = "Information";
+"infoAlertTitle" = "Attention";
+"infoAlertMessage" = "Smth goes wrong...";
+"infoAlertNo" = "Unclear";
+"buttonAlertText" = "Open alert";
+
+//LocationViewController
+"routeButtonTitle" = "Route";
+"removeButtonTitle" = "Remove";
+"pinTitle" = "Destination point";
+
+//AuthViewController
+"authButton" = "Log in with biometry";
+"errorAlertTitle" = "Attention";
+"errorAlertMessage" = "Biometry doesn't allow";
+
+//LocalNotificationsService
+"contentTitle" = "Check the latest updates";
+"contentBody" = "Maybe there's smth new?";
+
+//SideMenuViewController
+"menu" = "Menu";
+"settingsTitle" = "Settings";
+"friendsTitle" = "Friends";
+
+//SecondProfileHeaderView
+"messageTitle" = "Write";
+"callTitle" = "Call";
+
+//FullInfoViewController
+"nameLabel" = "Name";
+"surnameLabel" = "Surname";
+"sexLabel" = "Sex";
+"womenLabel" = "Woman";
+"menLabel" = "Man";
+"birthLabel" = "Birth date";
+"cityLabel" = "Hometown";
+
+
+
