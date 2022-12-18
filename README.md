@@ -1,7 +1,5 @@
 # NetDiplom (Вконтакте 2.0)
 
-[![Telegram: @Suharichek](https://img.shields.io/badge/Contact-Telegram-blue.svg?style=flat)](https://t.me/Suharichek)
-
 Приложение Вконтакте 2.0 было разработано на курсе [Нетологии](https://netology.ru/)
 
 <img src="Screenshots/Authorization.png" width = "200" height = "425"/>
