@@ -4,13 +4,13 @@
 
 Приложение Вконтакте 2.0 было разработано на курсе [Нетологии](https://netology.ru/)
 
-<img src="Screenshots/Start.png" width = "200" height = "425"/>
+<img src="Screenshots/Authorization.png" width = "200" height = "425"/>
 
 ## Про приложение
 
 Вконтакте 2.0 помогает Вам поддерживать общение с близкими людьми, делиться новостями и фото сделанных во время пушествий и не только. Главный экран содержит новостную ленту, а также можно переключаться на Ваш собственный профиль; просматривать посты, добавленные в избранное; отслеживать ваше местоположение и прокладывать маршруты на карте вашего города.
 
-<img src="Screenshots/Authorization.png" width = "200" height = "425"/> <img src="Screenshots/Profile.png" width = "200" height = "425"/> <img src="Screenshots/Feeds.png" width = "200" height = "425"/> <img src="Screenshots/Favourites.png" width = "200" height = "425"/> <img src="Screenshots/Location.png" width = "200" height = "425"/>
+<img src="Screenshots/Profile.png" width = "200" height = "425"/> <img src="Screenshots/Feeds.png" width = "200" height = "425"/> <img src="Screenshots/Favourites.png" width = "200" height = "425"/> <img src="Screenshots/Location.png" width = "200" height = "425"/>
 
 ## Совместимость
 
