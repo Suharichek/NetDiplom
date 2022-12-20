@@ -220,22 +220,22 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func logInButtonPressed(){
-                UserDefaults.standard.setValue(false, forKey: "isManuallySignOut")
-                guard
-                    //let delegate = self.delegate,
-                    let login = loginTextField.text,
-                    let password = passwordTextField.text
-                else { return }
-                let authData = AuthModel(value: [login, password])
-                do {
-                    let realm = try Realm()
-                    try realm.write { realm.add(authData) }
-                } catch let error {
-                    print ("⛔️ REALM ERROR: \(error.localizedDescription)")
-                }
-        
-                toAuthentication(login, password)
-        //self.pushProfileViewController()
+//                UserDefaults.standard.setValue(false, forKey: "isManuallySignOut")
+//                guard
+//                    //let delegate = self.delegate,
+//                    let login = loginTextField.text,
+//                    let password = passwordTextField.text
+//                else { return }
+//                let authData = AuthModel(value: [login, password])
+//                do {
+//                    let realm = try Realm()
+//                    try realm.write { realm.add(authData) }
+//                } catch let error {
+//                    print ("⛔️ REALM ERROR: \(error.localizedDescription)")
+//                }
+//
+//                toAuthentication(login, password)
+        self.pushProfileViewController()
     }
     
     private func toAuthentication (_ login: String, _ password: String) {
