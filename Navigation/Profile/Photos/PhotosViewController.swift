@@ -34,31 +34,22 @@ class PhotosViewController: UIViewController {
         return collection
     }()
     
-    private lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.center = self.view.center
-        return indicator
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
-        view.addSubview(activityIndicator)
         collectionView.backgroundColor = .backgroundColor
-        collectionView.snp.makeConstraints { make in  // разобраться с рандомом картинок
+        collectionView.snp.makeConstraints { make in  
             make.leading.top.trailing.bottom.equalTo(self.view)
         }
         facade.subscribe(self)
-        facade.addImagesWithTimer(time: 0.5, repeat: 10, userImages: filtredPhotosArray)
-        activityIndicator.startAnimating()
-        imageProcessor.processImagesOnThread(sourceImages: filtredPhotosArray, filter: .tonal, qos: QualityOfService.userInteractive) { [unowned self] cgImages in
-            self.newPhotoArray = cgImages.map({UIImage(cgImage: $0!)})
+        facade.addImagesWithTimer(time: 0, repeat: 18, userImages: filtredPhotosArray)
+//        imageProcessor.processImagesOnThread(sourceImages: filtredPhotosArray, filter: .tonal, qos: QualityOfService.userInteractive) { [unowned self] cgImages in
+//            self.newPhotoArray = cgImages.map({UIImage(cgImage: $0!)})
             DispatchQueue.main.async{
                 self.collectionView.reloadData()
-                self.activityIndicator.stopAnimating()
             }
         }
-    }
+    //}
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true

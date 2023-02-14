@@ -32,12 +32,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //private lazy var logInScrollView = UIScrollView()
+    private lazy var logInScrollView = UIScrollView()
     private lazy var contentView = UIView()
     
     private lazy var logo: UIImageView = {
         let logo = UIImageView()
-        logo.image = UIImage(named: "logo")
+        logo.image = UIImage(named: "1024")
         logo.contentMode = .scaleAspectFit
         return logo
     }()
@@ -148,8 +148,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func setupContentViews() {
-        view.addSubview(contentView)
-        //        logInScrollView.addSubview(contentView)
+        view.addSubview(logInScrollView)
+        logInScrollView.addSubview(contentView)
         contentView.addSubview(logo)
         contentView.addSubview(textFieldsStackView)
         contentView.addSubview(logInButton)
@@ -162,12 +162,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     private func setupLoginLayouts() {
         
-        //        logInScrollView.snp.makeConstraints { make in
-        //            make.leading.top.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
-        //        }
+        logInScrollView.snp.makeConstraints { make in
+            make.leading.top.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
         
         contentView.snp.makeConstraints { make in
-            make.leading.top.trailing.bottom.centerX.centerY.equalToSuperview()
+            make.leading.top.trailing.bottom.centerX.centerY.equalTo(logInScrollView)
         }
         
         logo.snp.makeConstraints { make in
@@ -323,6 +323,50 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         if let item = self.items?.first {
             toAuthentication(item.login, item.password)
         }
+    }
+    
+    @objc func keyboardShow(_ notification: Notification){
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            logInScrollView.contentOffset.y = keyboardRectangle.height - (logInScrollView.frame.height - logInButton.frame.maxY) + 16
+        }
+    }
+    
+    @objc func keyboardHide(_ notification: Notification){
+        logInScrollView.contentOffset = CGPoint(x: 0, y: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardShow),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardHide),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        
+        NotificationCenter.default.removeObserver(
+            self,
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 

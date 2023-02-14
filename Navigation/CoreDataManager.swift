@@ -9,19 +9,19 @@ import UIKit
 import CoreData
 
 final class CoreDataManager {
-    
+
     static let shared = CoreDataManager()
     private let persistentContainer: NSPersistentContainer
     private let fetchRequest: NSFetchRequest<FavouritePostEntity>
     private lazy var context = persistentContainer.viewContext
-    
+
     private lazy var saveContext: NSManagedObjectContext = {
         let saveContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         saveContext.persistentStoreCoordinator = self.persistentContainer.persistentStoreCoordinator
         saveContext.mergePolicy = NSOverwriteMergePolicy
         return saveContext
     }()
-    
+
     private init() {
         let container = NSPersistentContainer(name: "FavouritePostModel")
         container.loadPersistentStores { description, error in
@@ -32,7 +32,7 @@ final class CoreDataManager {
         self.persistentContainer = container
         self.fetchRequest = FavouritePostEntity.fetchRequest()
     }
-    
+
     func fetchFavourites() -> [Post] {
         var fetchedPosts = [Post]()
         var favouritePosts = [FavouritePostEntity]()
@@ -44,7 +44,8 @@ final class CoreDataManager {
                     author: favourite.author ?? "",
                     title: favourite.title ?? "",
                     description: favourite.text ?? "",
-                    personalID: favourite.id ?? "", image: image,
+                    personalID: favourite.id ?? "",
+                    image: image,
                     likes: Int(favourite.likes),
                     views: Int(favourite.views))
                 fetchedPosts.append(post)
@@ -55,13 +56,13 @@ final class CoreDataManager {
         fetchRequest.predicate = nil
         return fetchedPosts
     }
-    
+
     func fetchFiltredFavourites(_ author: String) -> [Post] {
         let predicate = NSPredicate(format: "author = %@", author)
         fetchRequest.predicate = predicate
         return fetchFavourites()
     }
-    
+
     func saveFavourite (post: Post) {
         let favouritePosts = fetchFavourites()
         if favouritePosts.contains(where: { $0.personalID == post.personalID }) {
@@ -86,12 +87,12 @@ final class CoreDataManager {
             }
         }
     }
-    
+
     func deleteFavourite (post: Post) {
         var favouritePosts = [FavouritePostEntity]()
         do {
             favouritePosts = try saveContext.fetch(fetchRequest)
-            
+
             saveContext.perform {
                 for favourite in favouritePosts {
                     if post.personalID == favourite.id {
@@ -109,7 +110,7 @@ final class CoreDataManager {
             print(error.localizedDescription)
         }
     }
-    
+
     public func removeFromCoreData() {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "FavouritePostEntity")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
