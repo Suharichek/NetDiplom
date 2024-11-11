@@ -16,4 +16,4 @@
 
 ## Автор
 
-* [Юлия Сухарева](https://github.com/Suharik-228)
+* [Юлия Сухарева](https://github.com/Suharichek)
